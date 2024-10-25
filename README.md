@@ -1,5 +1,5 @@
 # DetectiNator - Image Detection and Captioning App
-
+![GUI](ss.png)
 A Streamlit web application that performs object detection using YOLOv4 and generates image captions using BLIP transformer model.
 
 ## Features
