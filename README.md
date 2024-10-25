@@ -1,4 +1,3 @@
-```markdown
 # DetectiNator - Image Detection and Captioning App
 
 A Streamlit web application that performs object detection using YOLOv4 and generates image captions using BLIP transformer model.
@@ -76,7 +75,3 @@ streamlit run main.py
 - Requires stable internet for first-time model downloads
 
 ## License
-
-[Add your chosen license here]
-
-```
