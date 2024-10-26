@@ -36,7 +36,7 @@ with st.container(border =True,height = 705):
             # selected_model = st.radio("Select a model", ["yolov4"])
             selected_model = "yolov4"
             if st.button("Detect"):
-                desired_width = 800
+                desired_width = 416 #should be multiple of 32
                 aspect_ratio = desired_width / img.shape[1]
                 desired_height = int(img.shape[0] * aspect_ratio)
                 dim = (desired_width, desired_height)
@@ -63,15 +63,7 @@ with st.container(border =True,height = 705):
                         st.header(caption)
                         st.caption("caption generated using BLIP[Huggingface transformer lib]")
 
-                # with col3:
-                #     # Chat with the model based on the caption
-                #         st.subheader("Chat with the Model")
-                #         user_input = st.text_input("Ask about the image or caption:")
-                #         if user_input:
-                #             # Simple response generation logic (for demonstration)
-                #             # In a real implementation, this would involve model inference
-                #             response = f"You asked: '{user_input}' about the caption: '{caption}'."
-                #             st.write(response)
+
     # cv2.imwrite("object_detection.jpg", out_img)
     # cv2.namedWindow("Object_detected")
     # cv2.moveWindow("Object_detected",700,200)
@@ -95,3 +87,14 @@ with st.container(border =True,height = 705):
     #     # Check the shape of cv2_img:
     #     # Should output shape: (height, width, channels)
     #     st.write(cv2_img.shape)
+
+
+                # with col3:
+                #     # Chat with the model based on the caption
+                #         st.subheader("Chat with the Model")
+                #         user_input = st.text_input("Ask about the image or caption:")
+                #         if user_input:
+                #             # Simple response generation logic (for demonstration)
+                #             # In a real implementation, this would involve model inference
+                #             response = f"You asked: '{user_input}' about the caption: '{caption}'."
+                #             st.write(response)
